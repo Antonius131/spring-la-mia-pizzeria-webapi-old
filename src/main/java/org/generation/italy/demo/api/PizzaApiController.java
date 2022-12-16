@@ -1,4 +1,4 @@
-package org.generation.italy.controller;
+package org.generation.italy.demo.api;
 
 
 import java.util.List;
@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/pizza")
+@RequestMapping("api/1")
 @CrossOrigin("*")
 public class PizzaApiController {
 
 	@Autowired
 	private PizzaService pizzaService;
 	
-	@GetMapping("/pizzas")
+	@GetMapping("/all")
 	public List<Pizza> getPizzas() {
 		
 		return pizzaService.findAll();
